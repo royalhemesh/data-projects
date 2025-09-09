@@ -96,7 +96,12 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 📄 License
 <<<<<<< HEAD
+<<<<<<< HEAD
 This project is licensed under the MIT License. See the LICENSE file for details. (Note: You'll need to add a LICENSE file to your repository for this to be valid).
+=======
+This project is licensed under the MIT License. See the LICENSE file for details. (Note: You'll need to add a LICENSE file to your repository for this to be valid).
+The dataset used is the "Brazilian E-Commerce Public Dataset by Olist," which is publicly available on **[Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)**.
+>>>>>>> 30b3547fe4b3b3d5ecf40c061761a143fc5b785a
 =======
 This project is licensed under the MIT License. See the LICENSE file for details. (Note: You'll need to add a LICENSE file to your repository for this to be valid).
 The dataset used is the "Brazilian E-Commerce Public Dataset by Olist," which is publicly available on **[Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)**.
