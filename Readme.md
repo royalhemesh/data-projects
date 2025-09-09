@@ -1,74 +1,99 @@
-# Olist Customer Satisfaction Analysis: A Deep Dive into E-Commerce Reviews
+Olisit Customer Data Analysis Project
+📖 Overview
+This project performs an in-depth analysis of the Olisit customer dataset. The primary goal is to process and clean the raw data, conduct exploratory data analysis (EDA) to uncover insights, and present the key findings through an interactive web application.
 
-This repository contains an end-to-end data analysis project that identifies the primary driver of negative customer reviews on the Olist e-commerce platform. The analysis proceeds from raw data cleaning to a final set of actionable business recommendations.
+This repository serves as a demonstration of a complete data science workflow, from data ingestion and cleaning to analysis and presentation.
 
-## 🎯 Business Problem
+✨ Key Features
+Data Processing: Robust scripts for cleaning and preparing the Olisit dataset for analysis.
 
-Customer satisfaction is a critical metric for the success and growth of any e-commerce platform. Negative reviews can deter potential customers and highlight operational inefficiencies. Therefore, the central question for this project is:
+Exploratory Data Analysis (EDA): A comprehensive Jupyter Notebook detailing the analysis process, statistical summaries, and visualizations.
 
-> **What are the primary drivers of low customer review scores (1-2 stars), and how can Olist use this information to improve customer satisfaction?**
+Interactive Web Application: A user-friendly web app to visualize the key metrics and findings from the analysis.
 
----
+Modular Code: Well-structured and commented Python scripts for maintainability and reusability.
 
-## 💡 Key Insights & Actionable Recommendations
+🛠️ Technology Stack
+Language: Python 3.9+
 
-For recruiters and hiring managers, here are the key takeaways from the analysis:
+Libraries:
 
-#### Insights
-1.  **Delivery Timeliness is the #1 Predictor of Satisfaction:** The analysis proves with statistical significance that a late delivery is the single most powerful predictor of a negative (1 or 2-star) review.
-2.  **Late Deliveries Overshadow All Other Factors:** The negative impact of a late delivery is so strong that it consistently overshadows other factors like product category, price, or freight value.
+Pandas & NumPy for data manipulation
 
-#### Recommendations
-1.  **Optimize the Logistics Pipeline:** Olist should focus operational improvements on its shipping and delivery network. By analyzing carrier performance and setting more accurate delivery estimates, the company can directly address the primary cause of customer dissatisfaction.
-2.  **Implement Proactive Customer Communication:** For orders projected to be late, Olist should automatically notify the customer of the delay. This transparency, coupled with a small gesture like a future discount, can mitigate the negative experience and improve customer retention.
+Matplotlib & Seaborn for data visualization
 
----
+Jupyter Notebook for exploratory analysis
 
-## 📊 Key Visualizations
+Streamlit / Flask for the web application (Please specify which one you used)
 
-The most impactful finding is visualized in the box plot below, which shows a dramatic drop in review scores for orders that were delivered late compared to those delivered on time or early.
+Version Control: Git & GitHub
 
+🚀 Getting Started
+Follow these instructions to get a copy of the project up and running on your local machine.
 
-*This chart clearly illustrates that while on-time deliveries cluster around 4 and 5-star reviews, late deliveries are centered around 1 and 2 stars.*
+Prerequisites
+Make sure you have Python 3.9 or higher installed on your system. You can check your Python version by running:
 
----
+python --version
 
-## 🛠️ Tech Stack
+Installation
+Clone the repository:
 
-* **Language:** `Python`
-* **Libraries:** `Pandas`, `NumPy`, `Matplotlib`, `Seaborn`, `SciPy`
-* **Environment:** `Jupyter Notebook`
+git clone [https://github.com/royalhemesh/data-projects.git](https://github.com/royalhemesh/data-projects.git)
 
----
+Navigate to the project directory:
 
-## 🔬 Analysis Workflow
+cd data-projects
 
-The project followed a structured data analysis workflow:
+Create and activate a virtual environment (Recommended):
 
-1.  **Data Cleaning & Aggregation:** Loaded 5 raw datasets, handled missing values, converted data types, and joined them into a single master table for analysis.
-2.  **Feature Engineering:** Created new features to aid the analysis, including `delivery_time` and `estimated_vs_actual_delivery`, which was crucial for the final insight.
-3.  **Exploratory Data Analysis (EDA):** Performed univariate, bivariate, and multivariate analysis to uncover initial patterns, with a focus on how different variables impacted the `review_score`.
-4.  **Hypothesis Testing:** Formalized the key observation from the EDA with a statistical test. An independent two-sample t-test was conducted, which confirmed that late deliveries result in a statistically significant decrease in average review scores (**p < 0.001**).
+# For macOS/Linux
+python3 -m venv venv
+source venv/bin/activate
 
----
+# For Windows
+python -m venv venv
+.\venv\Scripts\activate
 
-## 🚀 How to Replicate
+Install the required dependencies:
 
-To replicate this analysis on your own machine:
+pip install -r requirements.txt
 
-1.  Clone this repository:
-    ```bash
-    git clone [https://github.com/your-username/Olist-Analysis.git](https://github.com/your-username/Olist-Analysis.git)
-    ```
-2.  Install the required libraries:
-    ```bash
-    pip install -r requirements.txt
-    ```
-3.  Launch the Jupyter Notebook:
-    ```bash
-    jupyter notebook Olist_Analysis.ipynb
-    ```
+Usage
+Run the Data Processing Script (Optional):
+If you need to re-process the raw data, you can run the data_processing.py script.
 
-## 📂 Data Source
+python data_processing.py
 
+Explore the Analysis:
+To view the step-by-step exploratory data analysis, launch the Jupyter Notebook:
+
+jupyter notebook hemesh.ipynb
+
+Launch the Web Application:
+To start the interactive web application, run the app.py script.
+(Note: The command might differ if you are using Flask instead of Streamlit)
+
+# If using Streamlit
+streamlit run app.py
+
+# If using Flask
+python app.py
+
+Open your web browser and navigate to the local URL provided (e.g., http://localhost:8501).
+
+📁 Project Structure
+.
+├── olsit data/           # Directory for the raw dataset
+├── app.py                # Main script for the web application
+├── data_processing.py    # Script for data cleaning and preparation
+├── hemesh.ipynb          # Jupyter Notebook for exploratory data analysis (EDA)
+├── requirements.txt      # A list of Python libraries required for the project
+└── README.md             # This file!
+
+🤝 Contributing
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
+
+📄 License
+This project is licensed under the MIT License. See the LICENSE file for details. (Note: You'll need to add a LICENSE file to your repository for this to be valid).
 The dataset used is the "Brazilian E-Commerce Public Dataset by Olist," which is publicly available on **[Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)**.
