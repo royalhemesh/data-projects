@@ -94,9 +94,6 @@ Open your web browser and navigate to the local URL provided (e.g., http://local
 🤝 Contributing
 Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
 
-📄 License
-<<<<<<< HEAD
-<<<<<<< HEAD
 This project is licensed under the MIT License. See the LICENSE file for details. (Note: You'll need to add a LICENSE file to your repository for this to be valid).
 =======
 This project is licensed under the MIT License. See the LICENSE file for details. (Note: You'll need to add a LICENSE file to your repository for this to be valid).
