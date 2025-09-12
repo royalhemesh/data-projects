@@ -84,12 +84,12 @@ Open your web browser and navigate to the local URL provided (e.g., http://local
 
 📁 Project Structure
 .
-├── olsit data/           # Directory for the raw dataset
-├── app.py                # Main script for the web application
-├── data_processing.py    # Script for data cleaning and preparation
-├── hemesh.ipynb          # Jupyter Notebook for exploratory data analysis (EDA)
-├── requirements.txt      # A list of Python libraries required for the project
-└── README.md             # This file!
+├── olsit data/            Directory for the raw dataset
+├── app.py                 Main script for the web application
+├── data_processing.py     Script for data cleaning and preparation
+├── hemesh.ipynb           Jupyter Notebook for exploratory data analysis (EDA)
+├── requirements.txt       A list of Python libraries required for the project
+└── README.md              This file!
 
 🤝 Contributing
 Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
