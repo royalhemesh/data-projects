@@ -26,14 +26,6 @@ Used GROUP BY, JOIN, CTEs, and Window Functions for business insights.
 
 Key KPIs: Top-selling products, revenue by region, customer churn patterns, etc.
 
-Advanced SQL Queries
-
-Ranking queries using ROW_NUMBER() and RANK().
-
-Rolling averages and cumulative sales with WINDOW FUNCTIONS.
-
-Subqueries and nested SELECT statements for deeper insights.
-
 Visualization
 
 Jupyter Notebook with matplotlib & seaborn to visualize results of SQL queries.
