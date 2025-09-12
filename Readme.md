@@ -1,98 +1,114 @@
-Olisit Customer Data Analysis Project
+📊 Customer & Sales Data Analysis using SQL
 📖 Overview
-This project performs an in-depth analysis of the Olisit customer dataset. The primary goal is to process and clean the raw data, conduct exploratory data analysis (EDA) to uncover insights, and present the key findings through an interactive web application.
 
-This repository serves as a demonstration of a complete data science workflow, from data ingestion and cleaning to analysis and presentation.
+This project demonstrates end-to-end data analysis using SQL. The dataset was ingested into a PostgreSQL database, cleaned, and analyzed using SQL queries to extract valuable business insights.
+The project highlights how structured data can be transformed into actionable insights through query optimization, aggregation, and reporting techniques.
+
+The analysis is complemented by a Jupyter Notebook that explains the query logic, insights, and visualizations for better storytelling.
 
 ✨ Key Features
-Data Processing: Robust scripts for cleaning and preparing the Olisit dataset for analysis.
 
-Exploratory Data Analysis (EDA): A comprehensive Jupyter Notebook detailing the analysis process, statistical summaries, and visualizations.
+Database Design & Setup
 
-Interactive Web Application: A user-friendly web app to visualize the key metrics and findings from the analysis.
+Imported raw .csv data into PostgreSQL using .sql schema and DDL scripts.
 
-Modular Code: Well-structured and commented Python scripts for maintainability and reusability.
+Normalized data into relational tables for efficient querying.
+
+SQL Data Cleaning
+
+Handled duplicates, missing values, and inconsistent entries using SQL statements.
+
+Enforced constraints like NOT NULL, PRIMARY KEY, and CHECK for data integrity.
+
+Exploratory Data Analysis (EDA) with SQL
+
+Used GROUP BY, JOIN, CTEs, and Window Functions for business insights.
+
+Key KPIs: Top-selling products, revenue by region, customer churn patterns, etc.
+
+Advanced SQL Queries
+
+Ranking queries using ROW_NUMBER() and RANK().
+
+Rolling averages and cumulative sales with WINDOW FUNCTIONS.
+
+Subqueries and nested SELECT statements for deeper insights.
+
+Visualization
+
+Jupyter Notebook with matplotlib & seaborn to visualize results of SQL queries.
+
+Plots include revenue trends, top customers, and sales distribution.
 
 🛠️ Technology Stack
-Language: Python 3.9+
 
-Libraries:
+Database: PostgreSQL 13+
 
-Pandas & NumPy for data manipulation
+Query Language: SQL (DDL, DML, Aggregations, Window Functions)
 
-Matplotlib & Seaborn for data visualization
+Notebook: Jupyter Notebook (for explanation + visualization)
 
-Jupyter Notebook for exploratory analysis
+Python Libraries:
 
-Streamlit / Flask for the web application (Please specify which one you used)
+psycopg2 / SQLAlchemy (for DB connection)
 
-Version Control: Git & GitHub
+pandas, numpy (data manipulation)
+
+matplotlib, seaborn (visualization)
 
 🚀 Getting Started
-Follow these instructions to get a copy of the project up and running on your local machine.
-
 Prerequisites
-Make sure you have Python 3.9 or higher installed on your system. You can check your Python version by running:
 
-python --version
+Install PostgreSQL and pgAdmin (or any SQL client).
 
-Installation
-Clone the repository:
+Python 3.9+ with Jupyter Notebook.
 
-git clone [https://github.com/royalhemesh/data-projects.git](https://github.com/royalhemesh/data-projects.git)
+Setup
 
-Navigate to the project directory:
+Clone this repository:
 
-cd data-projects
+git clone https://github.com/royalhemesh/sql-analysis-project.git
+cd sql-analysis-project
 
-Create and activate a virtual environment (Recommended):
 
-# For macOS/Linux
-python3 -m venv venv
-source venv/bin/activate
+Import the SQL schema & dataset into PostgreSQL:
 
-# For Windows
-python -m venv venv
-.\venv\Scripts\activate
+\i data_setup.sql;
 
-Install the required dependencies:
 
-pip install -r requirements.txt
+Open Jupyter Notebook for step-by-step EDA:
 
-Usage
-Run the Data Processing Script (Optional):
-If you need to re-process the raw data, you can run the data_processing.py script.
-
-python data_processing.py
-
-Explore the Analysis:
-To view the step-by-step exploratory data analysis, launch the Jupyter Notebook:
-
-jupyter notebook hemesh.ipynb
-
-Launch the Web Application:
-To start the interactive web application, run the app.py script.
-(Note: The command might differ if you are using Flask instead of Streamlit)
-
-# If using Streamlit
-streamlit run app.py
-
-# If using Flask
-python app.py
-
-Open your web browser and navigate to the local URL provided (e.g., http://localhost:8501).
+jupyter notebook analysis.ipynb
 
 📁 Project Structure
 .
-├── olsit data/            Directory for the raw dataset
-├── app.py                 Main script for the web application
-├── data_processing.py     Script for data cleaning and preparation
-├── hemesh.ipynb           Jupyter Notebook for exploratory data analysis (EDA)
-├── requirements.txt       A list of Python libraries required for the project
-└── README.md              This file!
+├── data_setup.sql        # SQL script for schema & dataset creation
+├── analysis.ipynb        # Jupyter Notebook with queries & visualizations
+├── requirements.txt      # Python dependencies for visualization
+└── README.md             # Project documentation
+
+📊 Example Insights
+
+Top 5 Countries by Sales
+
+SELECT country, SUM(sales) AS total_sales
+FROM customers c
+JOIN orders o ON c.customer_id = o.customer_id
+GROUP BY country
+ORDER BY total_sales DESC
+LIMIT 5;
+
+
+Customer Retention (Churn Analysis)
+Using WINDOW FUNCTIONS to calculate repeat purchases.
+
+Revenue Growth Trend
+Month-wise revenue calculated with DATE_TRUNC() and visualized in Python.
 
 🤝 Contributing
-Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
+
+Contributions, suggestions, and optimizations for queries are welcome! Open an issue or submit a pull request.
 
 📄 License
-This project is licensed under the MIT License. See the LICENSE file for details. (Note: You'll need to add a LICENSE file to your repository for this to be valid).
+
+This project is licensed under the MIT License. See the LICENSE file for details.
